@@ -1,0 +1,12 @@
+C1 - Install MetaMask and examine Ether transaction costs (no code)
+
+1. Install MetaMask from metamask.io, create wallet, save the 12-word phrase
+2. Networks menu -> turn on "Show test networks" -> select Sepolia
+3. Copy address -> get test ETH from a Sepolia faucet
+4. Create Account 2 (Add account)
+5. Send 0.001 ETH from Account 1 to Account 2 (Market fee)
+6. Send 0.005 ETH (Market fee)
+7. Send 0.001 ETH with Low fee
+8. Activity -> open each transaction -> View on block explorer (Etherscan)
+9. Note for each: Gas Used, Gas Price (Gwei), Transaction Fee
+10. Check: Fee = Gas Used x Gas Price

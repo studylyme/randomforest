@@ -1,0 +1,12 @@
+C2 - Create and configure a MetaMask wallet and perform transactions (no code)
+
+1. Install MetaMask, Create a new wallet, set password
+2. Write down the 12-word Secret Recovery Phrase, confirm it
+3. Networks menu -> turn on "Show test networks" -> select Sepolia
+4. Rename accounts (Sender / Receiver), add Account 2
+5. Copy Sender address -> get test ETH from a Sepolia faucet
+6. Send 0.002 ETH from Sender to Receiver -> Confirm
+7. Switch to Receiver -> check balance increased
+8. Send 0.0005 ETH back from Receiver to Sender
+9. Activity tab -> View on block explorer for each transaction
+10. Check: balance drop = amount sent + fee
