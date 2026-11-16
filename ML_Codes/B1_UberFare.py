@@ -35,9 +35,23 @@ X = df.drop("fare_amount", axis=1)
 y = df["fare_amount"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
-for name, model in [("Linear Regression", LinearRegression()),
-                    ("Random Forest", RandomForestRegressor(n_estimators=50, n_jobs=-1))]:
-    model.fit(X_train, y_train)
-    pred = model.predict(X_test)
-    print(name, "R2:", r2_score(y_test, pred),
-          "RMSE:", np.sqrt(mean_squared_error(y_test, pred)))
+lr = LinearRegression()
+lr.fit(X_train, y_train)
+
+pred = lr.predict(X_test)
+
+print("Linear Regression")
+print("R2 Score:", r2_score(y_test, pred))
+print("RMSE:", np.sqrt(mean_squared_error(y_test, pred)))
+
+
+
+rf = RandomForestRegressor(n_estimators=50, n_jobs=-1)
+rf.fit(X_train, y_train)
+
+pred = rf.predict(X_test)
+
+print("Random Forest")
+print("R2 Score:", r2_score(y_test, pred))
+print("RMSE:", np.sqrt(mean_squared_error(y_test, pred)))
+
